@@ -23,16 +23,25 @@
 #         print('wrong password')
 # else:
 #     print('invalid username')
+
     
-name=input('please enter name :')
-name2=''
-name3=''
-for i in range(len(name)):
-    print(name[i]) 
-    name2=name[i]+name2
-    name3+=name[len(name)-i-1]
+# name=input('please enter name :')
+# name2=''
+# name3=''
+# for i in range(len(name)):
+#     print(name[i]) 
+#     name2=name[i]+name2
+#     name3+=name[len(name)-i-1]
     
-print(name2) 
-print(name3) 
+# print(name2) 
+# print(name3) 
+x=10
+print(id(x))
+x=123456789
+b=123456788+1
+print(id(x)==id(b))
+print(id(b))
+x=100
+print(id(x))
 
     

@@ -1,0 +1,15 @@
+{
+
+    "DID_REMOTECAR": 15,
+    "DID_LOCKCAR": 20,
+    "DID_USER": "Mohamed",
+    "DID_PASS": [
+        "TEST",
+        "123"
+    ],
+    "STATUS": {
+        "SUCCESS": 1,
+        "FAIL": 0
+    }
+
+}

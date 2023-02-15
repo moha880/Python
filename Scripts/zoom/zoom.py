@@ -45,8 +45,7 @@ def join(meet_code,passcode):
     Btn = driver.find_element("xpath","//a[@id='btnSubmit']")
     Btn.click()
     
-    X,Y =picCoordinates("openZoomMeetings.jpeg")
-    py.moveTo(clicks=2,x=X, y=Y)
+    X,Y =picCoordinates("openZoomMeetings.jpg")
     time.sleep(0.5) 
     py.click(clicks=2,x=X, y=Y)
     
@@ -63,18 +62,28 @@ def join(meet_code,passcode):
         py.hotkey('alt', 'a')
 
 if __name__ == "__main__":
+    print("********starting....********")
+    time.sleep(5)
+
     meet_code="6224511075"
     passcode = "IMT-S6J9T2"
     x = datetime.datetime.now()
     days=["Monday","Tuesday","Wednesday","Thursday"]
     while True:
         if connect(): 
+            print("connected...")
+            time.sleep(5)
+
             if x.strftime("%A") in days:
-                if x.strftime("%H")==20:
+                if int(x.strftime("%H"))>=20:
+                    print("joining...")
                     join(meet_code,passcode)
+                print("joined")
+                time.sleep(5)
             break
         else:
             # input Wifi name
+            print("start connecting...")
             time.sleep(2)
             name_of_router = "Mohammad"
             # connect to the given wifi network
